@@ -1,0 +1,58 @@
+---
+title: "Lab1_CatieKitrinos"
+author: "Catie Kitrinos"
+date: "8/24/2020"
+output: html_document
+bibliography: references.bib
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+
+### Exercise1
+```{r exer1}
+x<-3
+y<-15
+#sum
+x+y
+#difference
+x-y
+#product
+x*y
+#quotient
+x/y
+```
+### Exercise2
+```{r exer2}
+x<-2; y<-3
+z=x^5>y^4
+z
+```
+
+### Exercise3
+```{r exer3}
+vecx<-c(22,62,148,43,129)
+
+sum(vecx)
+vecx/404
+```
+
+### Exercise4
+```{r exer4}
+vecy<-c("A","T","C","G")
+sort(vecy)
+```
+
+
+
+Application written in R [@RCoreTeam].
+
+# REFERENCES
