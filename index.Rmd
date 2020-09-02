@@ -9,5 +9,6 @@ knitr::opts_chunk$set(echo = TRUE)
 
 
 [Lab1](Lab1_CatieKitrinosMarkup.html)
+
 [Lab2](Lab2_CatieKitrinosMarkup.html)
 
