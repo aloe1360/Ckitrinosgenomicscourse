@@ -1,5 +1,5 @@
 ---
-title: "Lab1_CatieKitrinos"
+title: "Lab2_CatieKitrinos"
 author: "Catie Kitrinos"
 date: "8/24/2020"
 output: html_document
