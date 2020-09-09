@@ -1,5 +1,5 @@
 ---
-title: "Lab3_CatieKitrinos"
+title: "Lab3a_CatieKitrinos"
 output: html_document
 ---
 
@@ -85,7 +85,7 @@ head_surveys <- surveys[1:6, ]
 #3. Use nrow() to extract the row that is in the middle of the data frame. Store the content of this row in an object named surveys_middle.
 #4. Combine nrow() with the - notation above to reproduce the behavior of head(surveys), keeping just the first through 6th rows of the surveys dataset.
 
-## 1Answer
+## 1 Answer
 ```{r}
 surveys_200 <-surveys[200,]
 
