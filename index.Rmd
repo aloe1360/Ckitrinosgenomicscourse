@@ -16,3 +16,5 @@ knitr::opts_chunk$set(echo = TRUE)
 
 [Lab3a](Lab3a_CatieKitrinosMarkup.html)
 
+[Lab3b](Lab3b_CatieKitrinosMarkup.html)
+
