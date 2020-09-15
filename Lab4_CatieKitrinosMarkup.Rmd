@@ -108,5 +108,172 @@ death_counts
   top_10_death
 ```
 
+# Exercise : Part 2
+
+# Question 5: Make plots using geom_point() of the 10 countries with the confirmed cases and deaths (two separate graphs) on 3/12/2020 and 9/12/2020.
+
+```{r}
+country_counts1 <- report_03_13_2020 %>%
+  group_by(Country_Region) %>%
+  summarize(cases = sum(Confirmed)) %>%
+  arrange(desc(cases))
+
+  top_10_cases1 <- slice(country_counts1, 1:10)
+```
+
+```{r}
+top_10_cases1
+```
+
+# 3/13 Cases
+
+```{r}
+ggplot(data = top_10_cases1, mapping = aes(x = Country_Region, y = cases)) +
+    geom_point(alpha = 0.1, aes(color = Country_Region))
+```
+
+# 3/13 Deaths
+
+```{r}
+country_counts2 <- report_03_13_2020 %>%
+  group_by(Country_Region) %>%
+  summarize(deaths = sum(Deaths)) %>%
+  arrange(desc(deaths))
+
+  top_10_cases2 <- slice(country_counts2, 1:10)
+```
+
+```{r}
+top_10_cases2
+```
+
+```{r}
+ggplot(data = top_10_cases2, mapping = aes(x = Country_Region, y = deaths)) +
+    geom_point(alpha = 0.1, aes(color = Country_Region))
+```
+
+# 9/13 Cases
+
+```{r}
+country_counts3 <- report_09_13_2020 %>%
+  group_by(Country_Region) %>%
+  summarize(cases = sum(Confirmed)) %>%
+  arrange(desc(cases))
+
+  top_10_cases3 <- slice(country_counts3, 1:10)
+```
+
+```{r}
+  top_10_cases3
+```
+```{r}
+ggplot(data = top_10_cases3, mapping = aes(x = Country_Region, y = cases)) +
+    geom_point(alpha = 0.1, aes(color = Country_Region))
+```
+
+# 9/13 deaths
+
+```{r}
+country_counts4 <- report_09_13_2020 %>%
+  group_by(Country_Region) %>%
+  summarize(deaths = sum(Deaths)) %>%
+  arrange(desc(deaths))
+
+  top_10_cases4 <- slice(country_counts4, 1:10)
+```
+
+```{r}
+top_10_cases4
+```
+
+```{r}
+ggplot(data = top_10_cases4, mapping = aes(x = Country_Region, y = deaths)) +
+    geom_point(alpha = 0.1, aes(color = Country_Region))
+```
+# Exercise 6: Make using geom_bar of the 10 states with the most confirmed cases and deaths (two separate graphs) on 3/12/2020 and 9/12/2020.
+
+# 3/13 State case counts
+
+```{r}
+ state_count2 <- report_03_13_2020 %>%
+  filter(Country_Region == "US") %>%
+  group_by(Province_State) %>%
+  summarize(cases = sum(Confirmed))  %>%
+  arrange(desc(cases))
+
+state_count2
+
+top_10_cases5 <- slice(state_count2, 1:10)
+
+top_10_cases5
+```
+
+```{r}
+ggplot(data = top_10_cases5, mapping = aes(x = Province_State, y = cases)) +
+    geom_bar(stat = 'identity') 
+```
+
+# 3/13 state death counts
+
+```{r}
+ state_count4 <- report_03_13_2020 %>%
+  filter(Country_Region == "US") %>%
+  group_by(Province_State) %>%
+  summarize(deaths = sum(Deaths))  %>%
+  arrange(desc(deaths))
+
+state_count4
+
+top_10_cases6 <- slice(state_count4, 1:10)
+
+top_10_cases6
+```
+
+```{r}
+ggplot(data = top_10_cases6, mapping = aes(x = Province_State, y = deaths)) +
+    geom_bar(stat = 'identity')
+```
+
+# 9/13 case count
+
+```{r}
+ state_count5 <- report_09_13_2020 %>%
+  filter(Country_Region == "US") %>%
+  group_by(Province_State) %>%
+  summarize(cases = sum(Confirmed))  %>%
+  arrange(desc(cases))
+
+state_count5
+
+top_10_cases7 <- slice(state_count5, 1:10)
+
+top_10_cases7
+```
+
+```{r}
+ggplot(data = top_10_cases7, mapping = aes(x = Province_State, y = cases)) +
+   geom_bar(stat = 'identity') 
+```
+
+```{r}
+ state_count6 <- report_09_13_2020 %>%
+  filter(Country_Region == "US") %>%
+  group_by(Province_State) %>%
+  summarize(deaths = sum(Deaths))  %>%
+  arrange(desc(deaths))
+
+state_count6
+
+top_10_cases8 <- slice(state_count6, 1:10)
+
+top_10_cases8
+```
+
+# 9/13 state death count
+
+```{r}
+ggplot(data = top_10_cases7, mapping = aes(x = Province_State, y = cases)) +
+    geom_bar(stat = 'identity') 
+```
 
 
