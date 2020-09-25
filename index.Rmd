@@ -22,5 +22,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 [Lab4a](Lab4a_CatieKitrinosMarkdown.html)
 
-[LAb5b](Lab5b_CatieKitrinosMarkup.html)
+[Lab5a](Lab5a_CatieKitrinosMarkup.html)
+
+[Lab5b](Lab5b_CatieKitrinosMarkup.html)
 
