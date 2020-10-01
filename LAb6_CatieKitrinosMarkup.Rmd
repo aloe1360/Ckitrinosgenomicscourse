@@ -231,8 +231,6 @@ ggplot(daily_report5, aes(x = Long, y = Lat, size = Deaths/1000)) +
     theme(legend.position = "right") +
     coord_fixed(ratio=1.5)
 
-daily_report5
-
 ```
 
 
