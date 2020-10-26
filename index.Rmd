@@ -30,4 +30,6 @@ knitr::opts_chunk$set(echo = TRUE)
 
 [Lab6](LAb6_CatieKitrinosMarkup.html)
 
+[Lab8](Lab8_CkitrinosMarkdown.html)
+
 
