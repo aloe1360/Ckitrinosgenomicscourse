@@ -34,4 +34,6 @@ knitr::opts_chunk$set(echo = TRUE)
 
 [Lab8](Lab8_CkitrinosMarkdown.html)
 
+[Lab9](Lab9_CKitrinosMarkdown.html)
+
 
