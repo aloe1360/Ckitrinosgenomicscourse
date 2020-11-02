@@ -1,0 +1,230 @@
+---
+title: "Lab9x_CKitrinosMarkdown"
+output: html_document
+---
+
+# Control Structures
+
+## Conditional Statements with 'if-else'
+
+if(<condition>) {
+        ## do something
+} 
+## Continue with rest of code
+
+## Add else clause
+
+if(<condition>) {
+        ## do something
+} 
+else {
+        ## do something else
+}
+
+## Some tests
+
+if(<condition1>) {
+        ## do something
+} else if(<condition2>)  {
+        ## do something different
+} else {
+        ## do something different
+}
+
+## example
+
+## Generate a uniform random number
+x <- runif(1, 0, 10)  
+if(x > 3) {
+        y <- 10
+} else {
+        y <- 0
+}
+# My example
+
+```{r}
+## Generate a uniform random number
+x <- runif(2, 3, 5)  
+if(x < 5) {
+        y <- 5
+} else {
+        y <- 0
+}
+```
+
+
+# For loops
+
+```{r}
+for(i in 1:10) {
+        print(i)
+}
+```
+
+```{r}
+x <- c("a", "b", "c", "d")
+for(i in 1:4) {
+        ## Print out each element of 'x'
+        print(x[i])  
+}
+```
+
+# My for loop
+
+```{r}
+x <- c("lemur", "capuchin", "baboon", "tarsier")
+for(i in 1:4) {
+        ## Print out each element of 'x'
+        print(x[i])  
+}
+```
+
+```{r}
+## Generate a sequence based on length of 'x'
+for(i in seq_along(x)) {   
+        print(x[i])
+}
+```
+
+```{r}
+for(letter in x) {
+        print(letter)
+}
+```
+
+```{r}
+for(i in 1:4) print(x[i])
+```
+
+# Nested for loops
+
+```{r}
+x <- matrix(1:6, 2, 3)
+for(i in seq_len(nrow(x))) {
+        for(j in seq_len(ncol(x))) {
+                print(x[i, j])
+        }   
+}
+```
+
+# While loops
+
+```{r}
+count <- 0
+while(count < 5) {
+        print(count)
+        count <- count + 1
+}
+```
+
+```{r}
+z <- 5
+set.seed(1)
+while(z >= 3 && z <= 10) {
+        coin <- rbinom(1, 1, 0.5)
+        
+        if(coin == 1) {  ## random walk
+                z <- z + 1
+        } else {
+                z <- z - 1
+        } 
+}
+print(z)
+```
+
+# Functions
+
+```{r}
+f <- function() {
+        ## This is an empty function
+}
+## Functions have their own class
+class(f)  
+```
+
+```{r}
+## Execute this function
+f()       
+```
+
+```{r}
+f <- function() {
+        cat("Its freezing\n")
+}
+f()
+```
+
+```{r}
+f <- function(num) {
+        for(i in seq_len(num)) {
+                cat("Its freezing\n")
+        }
+}
+f(3)
+```
+
+```{r}
+f <- function(num) {
+        hello <- "John you scrooge turn the heat on\n"
+        for(i in seq_len(num)) {
+                cat(hello)
+        }
+        chars <- nchar(hello) * num
+        chars
+}
+meaningoflife <- f(3)
+```
+
+```{r}
+print(meaningoflife)
+```
+
+```{r eval=FALSE, include=FALSE}
+f()
+```
+
+```{r}
+f <- function(num = 1) {
+        hello <- "You'll be sorry when the pipes freeze\n"
+        for(i in seq_len(num)) {
+                cat(hello)
+        }
+        chars <- nchar(hello) * num
+        chars
+}
+f()    ## Use default value for 'num'
+```
+
+```{r}
+f(4)   ## Use user-specified value
+```
+
+```{r}
+f(num = 5)
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
