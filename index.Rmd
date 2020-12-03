@@ -43,3 +43,5 @@ knitr::opts_chunk$set(echo = TRUE)
 [Lab 11](Lab11_CKitrinosMarkdown.html)
 
 [Lab 11x](Lab11xCKitrinosMArkdown.html)
+
+[Lab 12](Lab12CKitrinos.html)
